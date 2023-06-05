@@ -1,6 +1,6 @@
 {
-    "name": "your-name-here/translations",
-    "description": "Translations plugin for CakePHP",
+    "name": "ygavrilov/translations",
+    "description": "Translations plugin for CakePHP to manage translations in database and generate .po files",
     "type": "cakephp-plugin",
     "license": "MIT",
     "require": {
