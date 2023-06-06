@@ -192,4 +192,18 @@ class TranslationsController extends AppController
         }
         $this->set(compact('translation'));
     }
+
+    public function delete($id)
+    {
+        $this->loadModel('Translations');
+        $this->request->allowMethod(['post', 'delete']);
+        $translation = $this->Translations->get($id);
+        if ($this->Translations->delete($translation)) {
+            $this->Flash->success(__('The translation has been deleted.'));
+        } else {
+            $this->Flash->error(__('The translation could not be deleted. Please, try again.'));
+        }
+
+        return $this->redirect(['action' => 'index']);
+    }
 }
